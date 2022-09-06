@@ -1,8 +1,3 @@
-# library for definitions
-from nltk.corpus import wordnet as wn
-
-
-
 end = False
 
 # Load input text
@@ -41,17 +36,4 @@ with open("output.txt", 'w') as f:
     f.truncate(0)
     f.write(str(unique))
 
-
-# definitions
-while end is not True:
-    try:
-        thing = str(input("word: "))
-        syns = wn.synsets(thing)
-        print(syns[0].definition())
-        if thing == "endit":
-            break
-    except:
-        print("indexerror, try again")
-        if thing == "endit":
-            break
 
